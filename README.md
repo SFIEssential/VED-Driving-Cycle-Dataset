@@ -1,1 +1,7 @@
 # VED-Driving-Cycle-Dataset
+
+In our research, we conducted thorough data processing on the <a href="https://ieeexplore.ieee.org/document/9262035">VED dataset</a> with the objective of extracting driving cycle data. 
+
+Our primary focus was to ensure that each cycle had a minimum duration of 1800 seconds for subsequent analysis. To align with our specific research context, we mainly focused on electric vehicles (EVs) and plug-in hybrid electric vehicles (PHEVs). Given that the dataset exhibited varying data sampling rates, our approach prioritized trip records with the fewest gaps between data points. This involved rounding each data point to the nearest integer and prioritizing trips with the most comprehensive data coverage within the 1800-second time window. For trips exceeding 1800 seconds in duration, we only considered the data from the initial 1800-second time window as driving cycle. We extracted essential features such as timestamps, latitude, longitude, vehicle speed from the processed data (ten vehicular trips) for further model analysis and optimization. 
+
+In addition, we also incorporated elevation information into our dataset using the latitude and longitude data with the dedicated API provided by <a href="https://www.opentopodata.org">Open Topo Data</a>.
